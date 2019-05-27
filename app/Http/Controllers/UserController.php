@@ -8,7 +8,17 @@ class UserController extends Controller
 {
     public function index()
     {
-        return 'Usuarios';
+        $users =[
+            'Jaime',
+            'Florencia',
+            'Leon',
+            'Nadia',
+        ];
+
+        return view('users', [
+            'users' => $users,
+            'title' => 'Lista de Usuarios'
+        ]);
     }
 
     public function show($id)
